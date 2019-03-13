@@ -26,6 +26,7 @@ namespace SanShain.Bilichat.Controllers
             {
                 return Redirect("http://static.hdslb.com/images/member/noface.gif");
             }
+            Response.Headers["Cache-Control"] = "public,max-age=" + 60 * 60 * 24 * 3;
             return File(rawData, "image/jpeg");
         }
 
