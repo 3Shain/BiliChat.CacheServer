@@ -8,9 +8,26 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{890F6ECA-9934-482B-946E-9C3DAD633241}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SanShain.Bilichat", "src\SanShain.Bilichat\SanShain.Bilichat.csproj", "{3F19B604-D645-4BF2-A085-ACAD37C203FC}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F19B604-D645-4BF2-A085-ACAD37C203FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F19B604-D645-4BF2-A085-ACAD37C203FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F19B604-D645-4BF2-A085-ACAD37C203FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F19B604-D645-4BF2-A085-ACAD37C203FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3F19B604-D645-4BF2-A085-ACAD37C203FC} = {890F6ECA-9934-482B-946E-9C3DAD633241}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ED1035BC-9428-4291-A0F3-58413EF8D68B}
