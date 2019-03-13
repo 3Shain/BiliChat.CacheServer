@@ -9,19 +9,16 @@ namespace SanShain.Bilichat
 {
     public class Startup
     {
-        public IConfiguration Configuration { get; set; }
+        public IConfiguration Configuration { get; }
+
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var builder = new ConfigurationBuilder().AddEnvironmentVariables();
-            var environment = System.Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
-            if (environment == "Development")
-            {
-                builder.AddUserSecrets<Program>();
-            }
-            Configuration = builder.Build();
-
             services.AddDbContext<Models.BilichatContext>(options =>
             {
                 options.UseMySql(Configuration.GetConnectionString("mysql"));
