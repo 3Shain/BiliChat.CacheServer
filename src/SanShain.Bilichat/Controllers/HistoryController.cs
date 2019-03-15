@@ -20,8 +20,8 @@ namespace SanShain.Bilichat.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            return Json(await Db.Entrys.OrderByDescending(x => x.entry_time).GroupBy(x => x.room_id).Take(20).Select(key => key
-              .Select(u => new { u.user_id, u.user_intro, u.user_name, u.room_id, u.id, time = (u.entry_time.Ticks - (new DateTime(1970, 1, 1, 0, 0, 0)).Ticks) / 10000 }).FirstOrDefault()).ToArrayAsync());
+            return Json(await Db.Entrys.GroupBy(x => x.room_id).Take(20).Select(key => key.OrderByDescending(x => x.entry_time)
+              .Select(u => new { u.user_id, u.user_intro, u.user_name, u.room_id, u.id, time = (u.entry_time.Ticks - (new DateTime(1970, 1, 1, 0, 0, 0)).Ticks) / 10000 }).FirstOrDefault()).OrderByDescending(x=>x.time).ToArrayAsync());
         }
     }
 }
