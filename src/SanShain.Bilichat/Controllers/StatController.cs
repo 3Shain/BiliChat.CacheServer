@@ -65,6 +65,34 @@ namespace SanShain.Bilichat.Controllers
                         {
                             command="理解理解.jpg",
                             source="https://bilichat.3shain.com/images/rikai.jpg"
+                        },new
+                        {
+                            command="点名夸奖.jpg",
+                            source="https://bilichat.3shain.com/images/kua.jpg"
+                        },new
+                        {
+                            command="余裕余裕.jpg",
+                            source="https://bilichat.3shain.com/images/yoyu.jpg"
+                        },new
+                        {
+                            command="这种事情很奇怪啊.jpg",
+                            source="https://bilichat.3shain.com/images/qg.jpg"
+                        },new
+                        {
+                            command="？？？？",
+                            source="https://bilichat.3shain.com/images/n.gif"
+                        },new
+                        {
+                            command="？？？？？",
+                            source="https://bilichat.3shain.com/images/nn.gif"
+                        },new
+                        {
+                            command="不也挺好吗.jpg",
+                            source="https://bilichat.3shain.com/images/by.jpg"
+                        },new
+                        {
+                            command="完全理解.jpg",
+                            source="https://bilichat.3shain.com/images/gzrk.jpg"
                         }
                     }
                 };
