@@ -40,12 +40,36 @@ namespace SanShain.Bilichat.Controllers
                     room_id = ret.room_id
                 });
                 await Db.SaveChangesAsync();
-                return Json(ret);
+                return Json(new
+                {
+                    ret.uid,
+                    ret.room_id,
+                    config=GetConfig(ret.room_id)
+                });
             }
             else
             {
                 throw new Exception();
             }
+        }
+
+        public object GetConfig(int room_id)
+        {
+            if (room_id == 14917277)
+            {
+                return new
+                {
+                    customEmotions=new object[]
+                    {
+                        new
+                        {
+                            command="理解理解.jpg",
+                            source="https://bilichat.3shain.com/images/rikai.jpg"
+                        }
+                    }
+                };
+            }
+            return new object();
         }
     }
 }
