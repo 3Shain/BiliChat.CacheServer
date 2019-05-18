@@ -44,7 +44,7 @@ namespace SanShain.Bilichat.Controllers
                 {
                     ret.uid,
                     ret.room_id,
-                    config=new object();
+                    config = new object()
                 });
             }
             else
