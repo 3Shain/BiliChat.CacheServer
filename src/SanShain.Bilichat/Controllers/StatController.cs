@@ -44,9 +44,12 @@ namespace SanShain.Bilichat.Controllers
                 {
                     ret.uid,
                     ret.room_id,
+                    ret.live_status,
+                    ret.live_time,
+                    ret.is_sp,
+                    ret.special_type,
                     config = new
                     {
-                        blackList
                     }
                 });
             }
