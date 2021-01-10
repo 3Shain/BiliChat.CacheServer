@@ -20,7 +20,7 @@ namespace SanShain.Bilichat.Services
         public static readonly TimeSpan AVATAR_EMPTY_ABS_EXPIRE_TIME = TimeSpan.FromDays(1);
         public static readonly TimeSpan AVATAR_ABS_EXPIRE_TIME = TimeSpan.FromDays(30);
         public static readonly TimeSpan USER_ABS_EXPIRE_TIME = TimeSpan.FromDays(30);
-        public static readonly TimeSpan LIVE_ABS_EXPIRE_TIME = TimeSpan.FromDays(30);
+        public static readonly TimeSpan LIVE_ABS_EXPIRE_TIME = TimeSpan.FromSeconds(30);
 
         private IDistributedCache _Cache { get; set; }
         private IHttpClientFactory _Http { get; set; }
